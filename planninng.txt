@@ -1,0 +1,37 @@
+Voting application :---->
+..............................
+
+
+Voting app functionality->
+1. user signin / signup
+2. see the list of candidate
+3. user can vote for only once.
+4. there is a route which shows the list of candidate and theor live vote counts sorted by there vote count
+5. user data must contain their one unique id proof : adhar card
+6. there shoulb be one admin who can only maintain the table of candidate and he cant able to vote at all
+7. user ca change their password.
+8. user can login only with adhar card number and password.
+9. admin cant vote at all.
+..................................
+
+Routes:
+
+user Authentication :
+1 > /signup : post - create a new user account.
+2 > /login : post - login into an existing account.[adharcard no. + password];
+
+voting 
+1 > /candidate : GET - get the list of candidates
+2 > /vote/candidateID : - POST - vote for a specific candidate.
+
+vote counts:
+1 > /vote/counts : GET - get the list of candidates sorted by their vote counts.
+
+User Profile:
+1 > /profile :GET -  get the user's profile information.
+2 > /profile/password : PUT -Change password of user.
+
+Admin candidate management:
+1 > candidate:POST - create a new candidate.
+2 > candidates/:candidateID:PUT - Update an existing candidate.
+3 > /candidate/:candidateID:DELETE - Delete a candidate from the list.
